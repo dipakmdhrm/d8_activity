@@ -1,0 +1,8 @@
+uuid: eac200fe-87ab-48f9-b404-ee2a4c3f0eec
+langcode: en
+status: true
+dependencies: {  }
+id: rotator
+label: Rotator
+revision: 0
+description: 'Block for creating Rotator (Slider/Carousel)'

@@ -26,4 +26,10 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_activity: true
+  field_date_of_birth: true
+  field_first_name: true
+  field_last_name: true
+  field_profession: true
+  field_qualification: true
   member_for: true

@@ -1,0 +1,30 @@
+uuid: ba0354b7-a03d-41e8-98be-665f4c17af88
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+id: block_content.field_rotator_images
+field_name: field_rotator_images
+entity_type: block_content
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: 'Rotator Image'
+    title: 'Rotator Image'
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
