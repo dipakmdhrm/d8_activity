@@ -1,0 +1,6 @@
+name: Drupal 8 Routing Demo
+description: Demo module for experimenting with routes
+package: Drupal 8 Training
+type: module
+version: 1.0
+core: 8.x

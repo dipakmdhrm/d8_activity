@@ -1,0 +1,7 @@
+d8_routing_demo.hello_world:
+  path: '/hello-world'
+  defaults:
+    _controller: '\Drupal\d8_routing_demo\Controller\RouteController::hello_world'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
