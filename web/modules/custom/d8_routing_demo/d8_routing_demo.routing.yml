@@ -1,7 +1,14 @@
 d8_routing_demo.hello_world:
   path: '/hello-world'
   defaults:
-    _controller: '\Drupal\d8_routing_demo\Controller\RouteController::hello_world'
+    _controller: '\Drupal\d8_routing_demo\Controller\RouteController::helloWorld'
     _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+d8_routing_demo.hello_dynamic:
+  path: '/hello/{name}'
+  defaults:
+    _controller: '\Drupal\d8_routing_demo\Controller\RouteController::helloDynamic'
+    _title_callback: '\Drupal\d8_routing_demo\Controller\RouteController::helloDynamicTitleCallback'
   requirements:
     _permission: 'access content'
