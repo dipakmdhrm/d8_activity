@@ -12,3 +12,10 @@ d8_routing_demo.hello_dynamic:
     _title_callback: '\Drupal\d8_routing_demo\Controller\RouteController::helloDynamicTitleCallback'
   requirements:
     _permission: 'access content'
+d8_routing_demo.hello_dynamic_entity:
+  path: '/hello-user/{user}'
+  defaults:
+    _controller: '\Drupal\d8_routing_demo\Controller\RouteController::helloDynamicEntity'
+    _title_callback: '\Drupal\d8_routing_demo\Controller\RouteController::helloDynamicEntityTitleCallback'
+  requirements:
+    _permission: 'access content'
