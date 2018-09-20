@@ -8,6 +8,9 @@
 namespace Drupal\d8_routing_demo\Controller;
 
 use Drupal\user\UserInterface;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
 
 class RouteController {
   /**
@@ -62,5 +65,30 @@ class RouteController {
    */
   public function helloDynamicEntityTitleCallback(UserInterface $user) {
     return 'Hello ' . $user->getUsername();
+  }
+
+  /**
+   *
+   */
+  public function listNode(NodeInterface $node) {
+    $owner = $node->getOwner()->getAccountName();
+    return [
+      '#type' => '#markup',
+      '#markup' => $node->getTitle() . '|' . $owner,
+    ];
+  }
+
+  /**
+   *
+   */
+  public function listNodeTitleCallback(NodeInterface $node) {
+    return $node->getTitle();
+  }
+
+  /**
+   *
+   */
+  public function listNodeAccess(NodeInterface $node, AccountInterface $account) {
+    return AccessResult::allowedIf($node->getOwnerId() === $account->id());
   }
 }
