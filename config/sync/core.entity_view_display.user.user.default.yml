@@ -13,9 +13,144 @@ dependencies:
     - image.style.thumbnail
   module:
     - datetime
+    - field_layout
     - image
+    - layout_builder
+    - layout_discovery
     - options
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          cd53a1e2-d744-47f7-8043-989a578b62bb:
+            uuid: cd53a1e2-d744-47f7-8043-989a578b62bb
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:user_picture'
+              formatter:
+                type: image
+                settings:
+                  image_style: thumbnail
+                  image_link: content
+                third_party_settings: {  }
+                label: hidden
+            additional: {  }
+            weight: 0
+          5c6aa87c-234e-464a-80ef-7eb30fda69fe:
+            uuid: 5c6aa87c-234e-464a-80ef-7eb30fda69fe
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:user:user:member_for'
+            additional: {  }
+            weight: 1
+          2d2f293c-6a63-49dd-99aa-199513d7e437:
+            uuid: 2d2f293c-6a63-49dd-99aa-199513d7e437
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_first_name'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 2
+          3279e5f6-5860-41f8-8c18-a3b7231b7d6d:
+            uuid: 3279e5f6-5860-41f8-8c18-a3b7231b7d6d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_last_name'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 3
+          401baf8c-114b-4af5-b80f-0c36b31dc433:
+            uuid: 401baf8c-114b-4af5-b80f-0c36b31dc433
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_date_of_birth'
+              formatter:
+                label: above
+                settings:
+                  format_type: medium
+                  timezone_override: ''
+                third_party_settings: {  }
+                type: datetime_default
+            additional: {  }
+            weight: 4
+          aa10719a-8cbc-4d98-b2d6-c857c5fa710e:
+            uuid: aa10719a-8cbc-4d98-b2d6-c857c5fa710e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_qualification'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 5
+          afd9ef95-b7aa-486e-b103-7691367f3bf5:
+            uuid: afd9ef95-b7aa-486e-b103-7691367f3bf5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_profession'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 6
+          d0bcb918-fddc-4603-87c6-ebb4979019db:
+            uuid: d0bcb918-fddc-4603-87c6-ebb4979019db
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:user:user:field_activity'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 7
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default

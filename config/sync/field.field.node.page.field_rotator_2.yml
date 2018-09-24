@@ -1,0 +1,23 @@
+uuid: 454de0d5-db62-4966-b893-ffd5f5ee305a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rotator_2
+    - node.type.page
+id: node.page.field_rotator_2
+field_name: field_rotator_2
+entity_type: node
+bundle: page
+label: Rotator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

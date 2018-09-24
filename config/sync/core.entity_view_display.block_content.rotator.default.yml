@@ -8,8 +8,71 @@ dependencies:
     - field.field.block_content.rotator.field_rotator_images
     - field.field.block_content.rotator.field_rotator_interval
   module:
+    - field_layout
     - image
+    - layout_builder
+    - layout_discovery
     - options
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          d306447a-5c81-44c1-bde2-7439a99f3bd3:
+            uuid: d306447a-5c81-44c1-bde2-7439a99f3bd3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:rotator:field_rotator_images'
+              formatter:
+                label: hidden
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+                type: image
+            additional: {  }
+            weight: 0
+          bc07eed9-ec01-40ad-9550-5853c7ba1d88:
+            uuid: bc07eed9-ec01-40ad-9550-5853c7ba1d88
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:rotator:field_rotator_interval'
+              formatter:
+                label: hidden
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+                type: number_integer
+            additional: {  }
+            weight: 1
+          be9076bb-5658-4f27-86df-1eaa97cb9a81:
+            uuid: be9076bb-5658-4f27-86df-1eaa97cb9a81
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:rotator:field_rotator_effect'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 2
 id: block_content.rotator.default
 targetEntityType: block_content
 bundle: rotator

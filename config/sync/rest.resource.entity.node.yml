@@ -4,29 +4,19 @@ status: true
 dependencies:
   module:
     - basic_auth
+    - hal
     - node
     - serialization
 id: entity.node
 plugin_id: 'entity:node'
-granularity: method
+granularity: resource
 configuration:
-  GET:
-    supported_formats:
-      - json
-    supported_auth:
-      - basic_auth
-  POST:
-    supported_formats:
-      - json
-    supported_auth:
-      - basic_auth
-  DELETE:
-    supported_formats:
-      - json
-    supported_auth:
-      - basic_auth
-  PATCH:
-    supported_formats:
-      - json
-    supported_auth:
-      - basic_auth
+  methods:
+    - GET
+    - POST
+    - DELETE
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - basic_auth

@@ -1,0 +1,21 @@
+uuid: b3bb6cdb-0bda-477b-bced-b9b92b975cec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other
+    - node.type.page
+id: node.page.field_other
+field_name: field_other
+entity_type: node
+bundle: page
+label: Other
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

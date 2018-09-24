@@ -13,8 +13,14 @@ dependencies:
     - image.style.thumbnail
   module:
     - datetime
+    - field_layout
     - image
+    - layout_discovery
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
@@ -29,6 +35,12 @@ content:
     third_party_settings: {  }
   contact:
     weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_activity:
+    type: options_select
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -54,6 +66,18 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_profession:
+    type: options_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_qualification:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 2
     region: content
@@ -73,7 +97,4 @@ content:
     weight: 1
     region: content
 hidden:
-  field_activity: true
-  field_profession: true
-  field_qualification: true
   langcode: true

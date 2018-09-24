@@ -4,10 +4,83 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_other
+    - field.field.node.page.field_rotator_2
     - node.type.page
   module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          a1a82c23-86c1-4fd0-93a0-808d98d6974c:
+            uuid: a1a82c23-86c1-4fd0-93a0-808d98d6974c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          d37d2e24-f811-446c-af7e-6cdd65aedb1d:
+            uuid: d37d2e24-f811-446c-af7e-6cdd65aedb1d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:page:links'
+            additional: {  }
+            weight: 1
+          e60b59c7-af6a-436c-895d-4c6b8042319e:
+            uuid: e60b59c7-af6a-436c-895d-4c6b8042319e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:field_rotator_2'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 2
+          e932b233-1cbb-444d-8874-4193ac28f214:
+            uuid: e932b233-1cbb-444d-8874-4193ac28f214
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:field_other'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 3
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default
@@ -22,8 +95,26 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_other:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_rotator_2:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

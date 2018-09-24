@@ -8,9 +8,81 @@ dependencies:
     - field.field.node.product.field_product_type
     - node.type.product
   module:
+    - field_layout
     - image
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          8142ecf9-273c-4519-8293-a84d187328c1:
+            uuid: 8142ecf9-273c-4519-8293-a84d187328c1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:product:links'
+            additional: {  }
+            weight: 0
+          40057e35-9e8c-49d5-9204-e5f97f355073:
+            uuid: 40057e35-9e8c-49d5-9204-e5f97f355073
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          6bfa6c7c-096b-4d73-a4ee-baeda8726128:
+            uuid: 6bfa6c7c-096b-4d73-a4ee-baeda8726128
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:field_image'
+              formatter:
+                label: above
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+                type: image
+            additional: {  }
+            weight: 2
+          e4db2203-0cad-461e-89bc-32b1e8fa1746:
+            uuid: e4db2203-0cad-461e-89bc-32b1e8fa1746
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:field_product_type'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 3
 id: node.product.default
 targetEntityType: node
 bundle: product
