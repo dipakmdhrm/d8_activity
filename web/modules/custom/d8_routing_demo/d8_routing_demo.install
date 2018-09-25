@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the D8 Routing Demo module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function d8_routing_demo_schema() {
+  $schema['d8_demo'] = [
+    'description' => 'Stores demo fields.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key: unique ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'first_name' => [
+        'description' => 'First Name.',
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'last_name' => [
+        'description' => 'Last Name.',
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'indexes' => [
+      'first_name' => ['first_name'],
+      'last_name' => ['last_name'],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}

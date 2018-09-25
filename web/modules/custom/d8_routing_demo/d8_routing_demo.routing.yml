@@ -33,3 +33,10 @@ d8_routing_demo.simple_form:
     _title: 'Simple Form'
   requirements:
     _permission: 'access content'
+d8_routing_demo.di_form:
+  path: '/di-form'
+  defaults:
+    _form: '\Drupal\d8_routing_demo\Form\DIForm'
+    _title: 'DI Form'
+  requirements:
+    _permission: 'access content'
