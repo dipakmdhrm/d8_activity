@@ -40,3 +40,10 @@ d8_routing_demo.di_form:
     _title: 'DI Form'
   requirements:
     _permission: 'access content'
+d8_routing_demo.admin_weather_config:
+  path: '/admin/weather-config'
+  defaults:
+    _form: '\Drupal\d8_routing_demo\Form\WeatherConfigForm'
+    _title: 'Weather Configuration Form'
+  requirements:
+    _permission: 'administer site configuration'
