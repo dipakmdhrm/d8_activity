@@ -25,4 +25,4 @@ d8_routing_demo.list_node:
     _controller: '\Drupal\d8_routing_demo\Controller\RouteController::listNode'
     _title_callback: '\Drupal\d8_routing_demo\Controller\RouteController::listNodeTitleCallback'
   requirements:
-    _custom_access: '\Drupal\d8_routing_demo\Controller\RouteController::listNodeAccess'
+    _user_same_as_author: 'true'
