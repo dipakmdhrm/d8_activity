@@ -26,3 +26,10 @@ d8_routing_demo.list_node:
     _title_callback: '\Drupal\d8_routing_demo\Controller\RouteController::listNodeTitleCallback'
   requirements:
     _user_same_as_author: 'true'
+d8_routing_demo.simple_form:
+  path: '/simple-form'
+  defaults:
+    _form: '\Drupal\d8_routing_demo\Form\SimpleForm'
+    _title: 'Simple Form'
+  requirements:
+    _permission: 'access content'
