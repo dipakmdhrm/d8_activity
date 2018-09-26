@@ -6,3 +6,8 @@ services:
   d8_routing_demo.data_fetcher_writer:
     class: Drupal\d8_routing_demo\DataFetcherWriter
     arguments: ['@database']
+  d8_routing_demo.test_subscriber:
+    class: Drupal\d8_routing_demo\EventSubscriber\TestSubscriber
+    arguments: ['@path.current']
+    tags:
+      - { name: event_subscriber }
