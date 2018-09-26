@@ -11,3 +11,8 @@ services:
     arguments: ['@path.current']
     tags:
       - { name: event_subscriber }
+  d8_routing_demo.node_insert_subscriber:
+    class: Drupal\d8_routing_demo\EventSubscriber\NodeInsertSubscriber
+    arguments: ['@logger.dblog']
+    tags:
+      - { name: event_subscriber }

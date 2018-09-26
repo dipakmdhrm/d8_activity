@@ -1,0 +1,11 @@
+<?php
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\d8_routing_demo\Event\CustomEvent;
+
+function d8_routing_demo_node_insert(EntityInterface $node) {
+  $ed = \Drupal::service('event_dispatcher');
+  $ed->dispatch(
+    'd8_routing_demo.node.insert',
+    new CustomEvent($node)
+  );
+}
