@@ -1,0 +1,25 @@
+
+dipaks_module.route_controller_helloWorld:
+  path: 'hello_world'
+  defaults:
+    _controller: '\Drupal\dipaks_module\Controller\RouteController::helloWorld'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+dipaks_module.route_controller_helloDynamic:
+  path: 'helloo/{name}'
+  defaults:
+    _controller: '\Drupal\dipaks_module\Controller\RouteController::helloDynamic'
+    _title: 'Hello Dynamic'
+  requirements:
+    _permission: 'access content'
+
+dipaks_module.simple_form:
+  path: '/simplee-form'
+  defaults:
+    _form: '\Drupal\dipaks_module\Form\SimpleForm'
+    _title: 'SimpleForm'
+  requirements:
+    _access: 'TRUE'
+  

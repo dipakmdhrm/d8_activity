@@ -1,0 +1,14 @@
+{
+  "name": "drupal/dipaks_module",
+  "type": "drupal-module",
+  "description": "Dipak's Awesome Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/dipaks_module",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/dipaks_module",
+    "source": "http://cgit.drupalcode.org/dipaks_module"
+  },
+  "require": { }
+}

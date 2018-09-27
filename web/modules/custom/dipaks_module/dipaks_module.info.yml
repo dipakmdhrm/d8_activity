@@ -1,0 +1,8 @@
+name: 'Dipaks Module'
+type: module
+description: 'Dipaks Awesome Module'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - node
+  - user

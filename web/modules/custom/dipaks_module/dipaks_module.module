@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains dipaks_module.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dipaks_module_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dipaks_module module.
+    case 'help.page.dipaks_module':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Dipak&#039;s Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

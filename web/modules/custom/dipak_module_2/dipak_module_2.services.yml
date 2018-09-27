@@ -1,0 +1,6 @@
+services:
+  dipak_module_2.event_subscriber:
+    class: Drupal\dipak_module_2\EventSubscriber\DipakModule2Subscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

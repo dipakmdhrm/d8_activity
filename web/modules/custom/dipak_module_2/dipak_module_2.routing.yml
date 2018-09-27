@@ -1,0 +1,15 @@
+dipak_module_2.example:
+  path: '/dipak-module-2/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\dipak_module_2\Controller\DipakModule2Controller::build'
+  requirements:
+    _permission: 'access content'
+
+dipak_module_2.settings_form:
+  path: '/admin/config/system/dipak-module-2'
+  defaults:
+    _title: 'dipak_module_2 settings'
+    _form: 'Drupal\dipak_module_2\Form\SettingsForm'
+  requirements:
+    _permission: 'administer dipak_module_2 configuration'

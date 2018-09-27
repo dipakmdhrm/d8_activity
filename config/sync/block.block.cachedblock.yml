@@ -1,0 +1,20 @@
+uuid: f127549d-0f61-4668-944f-c846c35dfc0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - d8_routing_demo
+  theme:
+    - bartik
+id: cachedblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: cached_block
+settings:
+  id: cached_block
+  label: 'Cached block'
+  provider: d8_routing_demo
+  label_display: visible
+visibility: {  }

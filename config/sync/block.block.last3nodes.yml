@@ -1,0 +1,20 @@
+uuid: 842ffcea-a447-4ad4-a8d9-bc1712dc20ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - d8_routing_demo
+  theme:
+    - bartik
+id: last3nodes
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: last_3_nodes_block
+settings:
+  id: last_3_nodes_block
+  label: 'Last 3 Nodes'
+  provider: d8_routing_demo
+  label_display: visible
+visibility: {  }
