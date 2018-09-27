@@ -5,6 +5,7 @@ namespace Drupal\d8_routing_demo\EventSubscriber;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Drupal\Core\Path\CurrentPathStack;
+use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
  * Class TestSubscriber.
@@ -29,7 +30,7 @@ class TestSubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   static function getSubscribedEvents() {
-    $events['kernel.response'] = ['kernel_response'];
+    $events[KernelEvents::RESPONSE] = ['kernel_response'];
 
     return $events;
   }
@@ -43,7 +44,7 @@ class TestSubscriber implements EventSubscriberInterface {
   public function kernel_response(Event $event) {
     if(substr( $this->pathCurrent->getPath(), 0, 5 ) === "/node") {
       $response = $event->getResponse();
-      $response->headers->set('access-control-allow-origin', '*');
+      $response->headers->set('access-control-allow-origin', 'sdfasdfasfd');
     }
   }
 }

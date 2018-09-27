@@ -5,7 +5,7 @@ services:
       - { name: access_check, applies_to: _user_same_as_author }
   d8_routing_demo.data_fetcher_writer:
     class: Drupal\d8_routing_demo\DataFetcherWriter
-    arguments: ['@database']
+    arguments: ['@database', '@event_dispatcher' ]
   d8_routing_demo.test_subscriber:
     class: Drupal\d8_routing_demo\EventSubscriber\TestSubscriber
     arguments: ['@path.current']
@@ -13,6 +13,11 @@ services:
       - { name: event_subscriber }
   d8_routing_demo.node_insert_subscriber:
     class: Drupal\d8_routing_demo\EventSubscriber\NodeInsertSubscriber
+    arguments: ['@logger.dblog']
+    tags:
+      - { name: event_subscriber }
+  d8_routing_demo.data_entry_event_subscriber:
+    class: Drupal\d8_routing_demo\EventSubscriber\DataEntryEventSubscriber
     arguments: ['@logger.dblog']
     tags:
       - { name: event_subscriber }
