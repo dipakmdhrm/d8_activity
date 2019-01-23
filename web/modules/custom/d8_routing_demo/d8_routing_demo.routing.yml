@@ -26,3 +26,10 @@ d8_routing_demo.list_node:
     _title_callback: '\Drupal\d8_routing_demo\Controller\RouteController::listNodeTitleCallback'
   requirements:
     _custom_access: '\Drupal\d8_routing_demo\Controller\RouteController::listNodeAccess'
+d8_routing_demo.admin_weather_config:
+  path: '/admin/weather-config'
+  defaults:
+    _form: '\Drupal\d8_routing_demo\Form\WeatherConfigForm'
+    _title: 'Weather Configuration Form'
+  requirements:
+    _permission: 'administer site configuration'
