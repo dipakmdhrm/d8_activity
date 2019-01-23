@@ -1,0 +1,16 @@
+<?php
+/**
+ * Implements hook_theme().
+ *
+ * @return void
+ */
+function d8_routing_demo_theme() {
+  return [
+    'd8_routing_demo_weather_data' => [
+      'variables' => [
+        'city' => NULL,
+        'temp' => NULL,
+      ],
+    ],
+  ];
+}

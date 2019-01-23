@@ -46,7 +46,11 @@ class WeatherBlock extends BlockBase Implements ContainerFactoryPluginInterface 
     $response = json_decode($request->getBody());
     $city = $response->name;
     $temp = $response->main->temp - 270.15;
-    $build['#markup'] = "City: $city, Temperature: $temp C";
+    $build['data'] = [
+      '#theme' => 'd8_routing_demo_weather_data',
+      '#city' => $city,
+      '#temp' => $temp,
+    ];
     return $build;
   }
 
