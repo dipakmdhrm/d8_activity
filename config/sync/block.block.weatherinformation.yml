@@ -1,0 +1,20 @@
+uuid: 585f7055-9fc4-4ef9-8588-ed039f60548b
+langcode: en
+status: true
+dependencies:
+  module:
+    - d8_routing_demo
+  theme:
+    - bartik
+id: weatherinformation
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: weather_info
+settings:
+  id: weather_info
+  label: 'Weather Information'
+  provider: d8_routing_demo
+  label_display: visible
+visibility: {  }

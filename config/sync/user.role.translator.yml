@@ -1,0 +1,19 @@
+uuid: 8a7da9bd-c823-4493-a9a1-272cb8d4514c
+langcode: en
+status: true
+dependencies: {  }
+id: translator
+label: Translator
+weight: 3
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access site in maintenance mode'
+  - 'create content translations'
+  - 'delete content translations'
+  - 'translate block_content'
+  - 'translate interests taxonomy_term'
+  - 'translate interface'
+  - 'translate product node'
+  - 'update content translations'
+  - 'view the administration theme'

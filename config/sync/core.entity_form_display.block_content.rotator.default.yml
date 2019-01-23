@@ -1,0 +1,59 @@
+uuid: c5dffa01-6317-46ac-8c30-b9c27940feef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rotator
+    - field.field.block_content.rotator.field_rotator_effect
+    - field.field.block_content.rotator.field_rotator_images
+    - field.field.block_content.rotator.field_rotator_interval
+    - image.style.thumbnail
+  module:
+    - image
+id: block_content.rotator.default
+targetEntityType: block_content
+bundle: rotator
+mode: default
+content:
+  field_rotator_effect:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_rotator_images:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_rotator_interval:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
