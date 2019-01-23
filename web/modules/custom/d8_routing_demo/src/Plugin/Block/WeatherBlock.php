@@ -50,6 +50,9 @@ class WeatherBlock extends BlockBase Implements ContainerFactoryPluginInterface 
       '#theme' => 'd8_routing_demo_weather_data',
       '#city' => $city,
       '#temp' => $temp,
+      '#attached' => [
+        'library' => ['d8_routing_demo/weather-block'],
+      ],
     ];
     return $build;
   }

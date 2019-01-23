@@ -1,0 +1,5 @@
+weather-block:
+  version: 1.x
+  css:
+    component:
+      css/weather_block.css: {}
